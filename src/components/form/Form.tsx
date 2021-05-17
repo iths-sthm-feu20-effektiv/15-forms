@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 const Form = () => {
 	const [inputText, setInputText] = useState('default')
+	// const [inputText2, setInputText2] = useState('default')
 
 	return (
 	<section>
@@ -23,6 +24,7 @@ const Form = () => {
 			/>
 			</label> (controlled)
 		</p>
+
 		<p>
 			<input type="checkbox" value="hejsan" /> Precisions-klick
 		</p>
@@ -35,5 +37,16 @@ const Form = () => {
 	</section>
 
 )}
-
+// <p>
+// 	<label> Skriv in ditt namn:
+// 	<input onChange={event => {
+// 			console.log('Controlled change 2', event.target.value);
+// 			if( !event.target.value.endsWith('0') ) {
+// 				setInputText2(event.target.value)
+// 			}
+// 		}}
+// 		value={inputText2}
+// 	/>
+// 	</label> (controlled)
+// </p>
 export default Form
