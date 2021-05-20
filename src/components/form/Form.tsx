@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 const Form = () => {
 	const [inputText, setInputText] = useState('default')
+	const [uncontrolledText, setUncontrolledText] = useState('')
 	// const [inputText2, setInputText2] = useState('default')
 
 	return (
@@ -10,9 +11,12 @@ const Form = () => {
 			<label> Skriv in ditt namn:
 			<input onChange={event => {
 					console.log('Uncontrolled change', event.target.value);
+					setUncontrolledText(event.target.value)
 				}
 			} /> (uncontrolled)
 			</label>
+			<br/>
+			Du skrev: {uncontrolledText}
 		</p>
 		<p>
 			<label> Skriv in ditt namn:

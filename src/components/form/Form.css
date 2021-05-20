@@ -1,0 +1,58 @@
+:root {
+	--error-color: #CE2B1C;
+	--valid-color: #249919;
+}
+
+.update-form {
+	font-size: 1.2em;
+}
+
+.update-form > div {
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+.update-form > div > * {
+	display: block;
+}
+.update-form label {
+	font-weight: bold;
+	font-size: 0.9em;
+}
+.update-form input {
+	font-size: 1.1em;
+	border-radius: 0.3em;
+	border-width: 3px;
+	padding-left: 0.5em;
+}
+.update-form .message {
+	position: absolute;
+	color: var(--error-color);
+}
+.update-form .error {
+	border-color: var(--error-color);
+}
+.update-form .valid {
+	border-color: var(--valid-color);
+}
+/* CSS specificity
+1. Om reglerna är likvärdiga - sista regeln vinner
+2. Annars - den mest specifika regeln vinner
+
+Räkna ut poängen i varje kategori:
++ Id (#id)
++ Klasser (.container osv...) +pseudoklasser (:hover)
++ Element (div, input, main osv...)
+
+0 3 0
+.secret-base .villain:hover { color: blue; }
+
+0 1 1
+div .hero { color: red; }
+
+0 3 0
+.quinjet .sidekick.hero { color: purple; }
+
+<div class="secret-base">
+	<div class="villain hero sidekick"></div>
+</div>
+*/
